@@ -11,9 +11,7 @@ export default class Product extends Component {
   async componentDidMount() {
     const { id } = this.props.match.params;
 
-    const response = await api.get(
-      `https://rocketseat-node.herokuapp.com/api/products/${id}`
-    );
+    const response = await api.get(`http://localhost:3001/api/products/${id}`);
 
     this.setState({ product: response.data });
   }

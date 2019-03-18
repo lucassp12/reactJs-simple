@@ -16,7 +16,7 @@ export default class Main extends Component {
 
   loadProducts = async (page = 1) => {
     const response = await api.get(
-      `https://rocketseat-node.herokuapp.com/api/products?page=${page}`
+      `http://localhost:3001/api/products?page=${page}`
     );
     const { docs, ...productInfo } = response.data;
     this.setState({ products: docs, productInfo, page });
